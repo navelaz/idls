@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+// definicion de servicio
+service Adivino {
+    // cliente hace pregunta y recibe prediccion
+    rpc Preguntar (PreguntaRequest) returns (PrediccionReply){}
+}
+
+message PreguntaRequest {
+    string pregunta = 1;
+}
+
+message PrediccionReply {
+    string respuesta = 1;
+}
